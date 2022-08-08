@@ -47,3 +47,32 @@ imports: [
     BrowserModule,
     FormsModule
   ],
+
+
+# Extra caso queira instalar bootstrap
+npm install --save bootstrap
+
+lembrar de adcionar caminho no arquivo angular.json
+
+
+# 05 Melhorando a visualização #1
+
+adcionando imports para conversao de data e moeda
+
+
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt, 'pt');
+
+@NgModule({
+  
+  imports: [BrowserModule, FormsModule],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt' },
+    { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
+  ],
+ 
+
+ {{ transferencia.data | date:"short" }}
+{{ transferencia.valor | currency }}
