@@ -1,27 +1,49 @@
-# Bytebank
+# Bytebank Formação Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
+# Instalando o Angular CLI
+npm install -g @angular/cli
 
-## Development server
+# Criando o Projeto
+ng new bytebank
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Rodando o projeto
+ng serve --open
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Modificando ts.config para
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2017",
+    "module": "es2020",
+    "lib": [
+      "es2020",
+      "dom"
+    ]
+  }
 
-## Build
+# Aula 06 Criando o primeiro componente
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Aula 10 O que aprendemos?
 
-## Running unit tests
+Instalar e utilizar o Angular CLI;
+Criar uma aplicação Angular do zero;
+Utilizar o próprio CLI para levantar um servidor de desenvolvimento;
+Como é organizada uma aplicação Angular;
+Criar e utilizar um componente Angular.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+# Aula 2 - 05 Adcionando modulo FormsModule no arquivo app.module.ts
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+imports: [
+    BrowserModule,
+    FormsModule
+  ],
