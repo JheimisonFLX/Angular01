@@ -85,5 +85,62 @@ Utilizar o metadata @Input() para receber valores em um componente;
 Exibir uma lista de dados através da diretiva *ngFor;
 Configurar o formato de horas na aplicação.
 
+# Criando uma API rest Fake para fins de demostração de como consumir uma api
+
+# Instalando o json-server
+
+npm install -g json-server
+
+criar um diretorio na raiz com nome de dados
+
+criar um arquivo com nome db.json
+
+Modelo de dados colar dentro do arquivo db.json
+
+{
+  "transferencias": [
+    {
+      "id": "1",
+      "valor": 35,
+      "destino": "1212-1",
+      "data": "2020-11-04T16:30:10.710Z"
+    },
+    {
+      "id": "2",
+      "valor": 40,
+      "destino": "1213-1",
+      "data": "2020-11-04T21:24:10.710Z"
+    },
+    {
+      "id": "3",
+      "valor": 12.5,
+      "destino": "1214-1",
+      "data": "2020-11-05T21:14:10.710Z"
+    }
+  ]
+}
+
+# Rodando servidor
+
+ir até a pasta 
+cd dados
+rodar comando de subir servidor
+json-server --watch db.json
+
+
+# converter o json para typescript
+
+https://transform.tools/json-to-typescript
+
+# pegar o conteudo do json e converter para ts 
+
+export interface Transferencia {
+  id: number | string;
+  valor: number;
+  destino: string;
+  data: string;
+}
+
+Criar um diretorio dentro de app com nome de models e um arquivo com nome de trasnferencia.model.ts
 
 
