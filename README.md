@@ -148,13 +148,21 @@ Criar um diretorio dentro de app com nome de models e um arquivo com nome de tra
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
+##
+export const routes: Routes = [
+  {path: '', redirectTo: 'extrato', pathMatch: 'full'},
+  {path: 'extrato', component: ExtratoComponent},
+  {path: 'nova-transferencia', component: NovaTransferenciaComponent},
+
+]
+
 @NgModule({
-  imports: [RouterModule.forRoot({})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule{}
 
-
+##
 implementando aquivo routing
 
 importando ele dentro do app.module.ts
