@@ -1,3 +1,4 @@
+import { Router, Routes } from '@angular/router';
 import { Transferencia } from './../models/transferencia.model';
 import { TransferenciaService } from './../services/transferencia.service';
 import { HttpClient } from '@angular/common/http';
@@ -15,10 +16,9 @@ export class NovaTransferenciaComponent {
   valor: number;
   destino: number;
 
-  constructor(private service: TransferenciaService) {}
+  constructor(private service: TransferenciaService, private router: Router) {}
 
   transferir() {
-    // console.log(`${this.valor}, ${this.destino}`);
     const valorEmitir: Transferencia = {
       valor: this.valor,
       destino: this.destino,
@@ -27,10 +27,10 @@ export class NovaTransferenciaComponent {
       (resultado) => {
         console.log(resultado);
         this.limpaCampos();
+        this.router.navigateByUrl('extrato');
       },
       (error) => console.error(error)
     );
-    this.limpaCampos();
   }
 
   limpaCampos() {
