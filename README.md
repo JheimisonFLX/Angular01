@@ -143,4 +143,21 @@ export interface Transferencia {
 
 Criar um diretorio dentro de app com nome de models e um arquivo com nome de trasnferencia.model.ts
 
+# Criando arquivo de configuração de rotas com nome de app.routing.module.ts detro da raiz app
+
+import { NgModule } from "@angular/core";
+import { RouterModule } from "@angular/router";
+
+@NgModule({
+  imports: [RouterModule.forRoot({})],
+  exports: [RouterModule]
+})
+export class AppRoutingModule{}
+
+
+implementando aquivo routing
+
+importando ele dentro do app.module.ts
+ 
+imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
 
